@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Gameleon.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,22 +23,26 @@ namespace Gameleon
 
             Console.WriteLine("Socket connected to -> {0} ", sender.RemoteEndPoint.ToString());
 
-            var encodedString = GetResponce(sender);
-            //ReceivedData decodedString = JsonConvert.DeserializeObject<ReceivedData>(encodedString);
-
-            while(true)
+            while (true)
             {
+
+                var encodedString = GetResponce(sender);
+                BaseMessage baseMessage = GameMessageHandler.HandleMessage(encodedString);
 
             }
         }
 
+
+
         private static string GetResponce(Socket sender)
         {
-            byte[] messageReceived = new byte[1024];
-            int byteRecv = sender.Receive(messageReceived);
-            byte[] lengthBytes = messageReceived.Take(4).ToArray();
+            byte[] length = new byte[4];
+            int byteRecv = sender.Receive(length);
+            byte[] lengthBytes = length.Take(4).ToArray();
             int lengthOfMessage = BytesToInt(lengthBytes);
-            string encodedString = Encoding.ASCII.GetString(messageReceived.Skip(4).Take(lengthOfMessage).ToArray());
+            byte[] messageReceived = new byte[lengthOfMessage];
+            int messageRecv = sender.Receive(messageReceived);
+            string encodedString = Encoding.ASCII.GetString(messageReceived.ToArray());
             return encodedString;
         }
 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameBot.cs" />
     <Compile Include="GameMessageHandler.cs" />
     <Compile Include="Models\AcknowledgeMessage.cs" />
     <Compile Include="Models\BaseMessage.cs" />
