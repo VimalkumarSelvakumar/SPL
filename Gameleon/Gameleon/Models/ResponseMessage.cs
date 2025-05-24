@@ -1,5 +1,4 @@
-﻿using Gameleon.Modelsnamespace;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace Gameleon.Models
 {

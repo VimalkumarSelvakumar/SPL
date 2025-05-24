@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Gameleon.Modelsnamespace
+namespace Gameleon.Models
 {
     public class BaseMessage
     {
