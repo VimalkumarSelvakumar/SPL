@@ -52,6 +52,7 @@
     <Compile Include="Models\CommandMessage.cs" />
     <Compile Include="Models\ResponseMessage.cs" />
     <Compile Include="Models\ResultMessage.cs" />
+    <Compile Include="Models\SendMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
