@@ -27,7 +27,7 @@ namespace Gameleon
             {
 
                 var encodedString = GetResponce(sender);
-                BaseMessage baseMessage = GameMessageHandler.HandleMessage(encodedString);
+                var baseMessage = GameMessageParser.Parse(encodedString);
 
             }
         }
