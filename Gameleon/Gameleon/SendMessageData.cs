@@ -10,7 +10,7 @@ namespace Gameleon
 {
     public class SendMessageData
     {
-        public static byte[] Parse(byte[] message)
+        public static byte[] Parse(SendMessage message)
         {
             string json = JsonConvert.SerializeObject(message);
 
