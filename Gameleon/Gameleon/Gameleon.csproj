@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameBot.cs" />
-    <Compile Include="GameMessageHandler.cs" />
+    <Compile Include="GameMessageParser.cs" />
     <Compile Include="Models\AcknowledgeMessage.cs" />
     <Compile Include="Models\BaseMessage.cs" />
     <Compile Include="Models\CommandMessage.cs" />
