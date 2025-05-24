@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameMessageHandler.cs" />
+    <Compile Include="Models\AcknowledgeMessage.cs" />
+    <Compile Include="Models\BaseMessage.cs" />
+    <Compile Include="Models\CommandMessage.cs" />
+    <Compile Include="Models\ResponseMessage.cs" />
+    <Compile Include="Models\ResultMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
